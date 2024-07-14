@@ -1,0 +1,13 @@
+{
+  "routes": [
+    { "handle": "filesystem" }, 
+    { 
+      "src": "/api/data/json",  
+      "dest": "http://localhost:8080/api/data/json"  
+    },
+    { 
+      "src": "/(.*)",  
+      "dest": "/index.html"  
+    }
+  ]
+}
