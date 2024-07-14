@@ -25,7 +25,7 @@ const App = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/data/json`);
+                const response = await axios.get(`http://localhost:8080/api/data/json`);
                 setData(response.data.data); 
             } catch (error) {
                 console.error('Error fetching data:', error);
