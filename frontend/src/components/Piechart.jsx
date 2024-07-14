@@ -34,20 +34,19 @@ function PieChart({ data }) {
         label: ``,
         data: paginatedCounts,
         backgroundColor: [
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#4BC0C0',
-          '#9966FF',
-          '#FF9F40',
-          '#C9CBCF',
-          '#76D7C4',
-          '#F7DC6F',
-          '#85C1E9',
-          '#F1948A',
-          '#BB8FCE',
-          '#A569BD',
-          '#5D6D7E'
+          '#20657a',
+          '#ef476f',
+                '#ffd166',
+                '#06d6a0',
+                '#559db4',
+          '#7209b7',
+          '#b5179e',
+          '#f72585',
+                '#9b2226',
+                '#ca6702',
+                '#005f73',
+                '#74df94',
+                '#e9d8a6'
         ],
         borderColor: 'white',
         borderWidth: 1
@@ -62,14 +61,14 @@ function PieChart({ data }) {
   };
 
   return (
-    <div className='chart-container mt-3'>
+    <div className='container mt-5 mb-5'>
       <div style={{ maxWidth: '450px', color: "white", margin: '0 auto', padding: '20px' , height:"400px" }}>
-      <div className='d-flex m-2 justify-content-end'>
+      <div className='d-flex justify-content-end'>
   <select
     className='form-select form-select-sm'
     value={topic}
     onChange={handleTopic}
-    style={{ maxWidth: '150px' }} // Adjust width as needed
+    style={{ maxWidth: '120px' }} // Adjust width as needed
   >
     {Array.from(new Set(data.map(item => item.topic))).map((item, index) => (
       <option key={index} value={item}>{item}</option>
@@ -84,7 +83,7 @@ function PieChart({ data }) {
               padding: {
                 left: 10,
                 right: 10,
-                top: 10,
+                top: 0,
                 bottom: 10
               }
             },

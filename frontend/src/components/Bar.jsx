@@ -20,7 +20,7 @@ export const BarChart = ({ chartData }) => {
       acc[item.pestle] = (acc[item.pestle] || 0) + 1;
       return acc;
     }, {});
-    const sectors = Object.keys(sectorCounts).slice(0, 10);
+    const sectors = Object.keys(sectorCounts);
 //   const [startIndex, setStartIndex] = useState(0);
 //   const itemsPerPage = 20;
 
@@ -31,7 +31,7 @@ export const BarChart = ({ chartData }) => {
   const paginatedData = filteredData.slice(startIndex, startIndex + itemsPerPage);
 
   const  barData= {
-    labels: sectors.map(string => string.split(' ')[0]),
+    labels: sectors,
     datasets: [
         {
             label: 'Distribution of pestle',
@@ -83,7 +83,7 @@ export const BarChart = ({ chartData }) => {
           plugins: {
             title: {
               display: true,
-              text: "Growth od pestle "
+              text: "liklihood on Different PESTLE "
             },
             legend: {
               display: false
@@ -112,11 +112,11 @@ export const BarChart = ({ chartData }) => {
         
         }}
       />
-       <div className="pagination justify-content-between mt-3">
-<button onClick={handlePrev} className='' disabled={startIndex === 0}>
+       <div className="pagination justify-content-between mt-4">
+<button onClick={handlePrev} className='btn btn-primary  m-2' style={{backgroundColor:"#6930c3"}} disabled={startIndex === 0}>
 Previous
 </button>
-<button onClick={handleNext} className='' disabled={startIndex + itemsPerPage >= filteredData.length}>
+<button onClick={handleNext} className='btn btn-primary  m-2' style={{backgroundColor:"#6930c3"}} disabled={startIndex + itemsPerPage >= filteredData.length}>
 Next
 </button>
 </div>

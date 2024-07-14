@@ -41,15 +41,15 @@ const LineGraph = ({ chartData }) => {
       {
         label: 'Likelihood',
         data: paginatedData.map(item => item.likelihood),
-        borderColor: '#013a63',
+        borderColor: '#137bc5ae',
         
-        borderWidth: 1,
+        borderWidth: 2,
         fill: true, // Enable filling
         lineTension: 0.3,
-        pointBackgroundColor: '#013a63', // Color for the points
+        pointBackgroundColor: '#168de2', // Color for the points
         pointBorderColor: '#fff',
         pointHoverBackgroundColor: '#fff',
-        pointHoverBorderColor: '#013a63',
+        pointHoverBorderColor: '#1f6ca3',
 
       },
       {
@@ -179,10 +179,10 @@ const LineGraph = ({ chartData }) => {
         </div>
         <Line data={lineChartData} options={options} />
         <div className="pagination justify-content-between">
-          <button onClick={handlePrev} className='btn btn-primary m-2' disabled={startIndex === 0}>
+          <button onClick={handlePrev} className='btn btn-primary m-2' style={{backgroundColor:"#6930c3"}} disabled={startIndex === 0}>
             Previous
           </button>
-          <button onClick={handleNext} className='btn btn-primary m-2' disabled={startIndex + itemsPerPage >= filteredData.length}>
+          <button onClick={handleNext} className='btn btn-primary  m-2' disabled={startIndex + itemsPerPage >= filteredData.length} style={{backgroundColor:"#6930c3"}}>
             Next
           </button>
         </div>

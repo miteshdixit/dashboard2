@@ -43,13 +43,13 @@ function Source({ data }) {
   return (
     <div className=" mt-4">
       <div className="mb-3 d-flex">
-        <select value={selectedPestle} onChange={(e) => setSelectedPestle(e.target.value)} className="form-select me-2">
+        <select value={selectedPestle} onChange={(e) => setSelectedPestle(e.target.value)} className="form-select me-2" style={{ maxWidth: '120px' }}>
           <option value="">All Pestles</option>
           {pestles.map((item, index) => (
             <option value={item} key={index}>{item}</option>
-          ))}
+          ))} 
         </select>
-        <select value={selectedTopic} onChange={(e) => setSelectedTopic(e.target.value)} className="form-select me-2">
+        <select value={selectedTopic} onChange={(e) => setSelectedTopic(e.target.value)} className="form-select me-2" style={{ maxWidth: '120px' }}>
           <option value="">All Topics</option>
           {topics.map((item, index) => (
             <option value={item} key={index}>{item}</option>

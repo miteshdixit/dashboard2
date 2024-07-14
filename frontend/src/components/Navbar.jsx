@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect, useState } from "react";
 import { GoSun, GoMoon } from "react-icons/go";
@@ -16,19 +17,20 @@ function Navbar() {
 
   return (
     <div>
-      <nav className=" content navbar d-md-flex fixed-top navbar-expand-lg bg-body-tertiary header justify-content-start px-3">
-        
+      <nav className=" content navbar d-md-flex fixed-top navbar-expand-lg bg-body-tertiary header justify-content-between px-3">
+      <img  src="/dashboard.png" className="fs-4" height="100px" width="100px"/>
           <p className="fs-2 align-item-center">
             Dashboard
           </p>
           <div className="d-flex mb-2">
-          <button className="btn ms-2 align-item-center" onClick={toggleTheme}>
-            {theme === "light" ? <GoMoon style={{ fontSize: "24px" }} /> : <GoSun style={{ fontSize: "24px" }} />}
-          </button>
+          
           <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success align-item-center" type="submit">Search</button>
       </form>
+      <button className="btn ms-2 align-item-center" onClick={toggleTheme}>
+            {theme === "light" ? <GoMoon style={{ fontSize: "24px" }} /> : <GoSun style={{ fontSize: "24px" }} />}
+          </button>
       </div>
       </nav>
     </div>

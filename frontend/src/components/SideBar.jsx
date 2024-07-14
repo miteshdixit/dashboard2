@@ -17,7 +17,7 @@ function SideBar() {
       </button>
       <div className={`sidebar d-flex flex-column p-3 bg-light ${isSidebarActive ? 'active' : ''}`}>
         <a to="#" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-          <img  src="/dashboard.png" className="fs-4" height="100px" width="100px"/>
+         
 
         </a>
         <hr />
