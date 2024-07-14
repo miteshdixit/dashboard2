@@ -1,0 +1,220 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Base styles for the sidebar */
+.sidebar {
+  width: 278px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 100;
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease;
+}
+
+/* Hide sidebar on small screens */
+/* Sidebar CSS */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  /* position: static; */
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  /* z-index: 100; */
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+    /* position:inherit; */
+
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+}
+
+.sidebar-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 101;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.sidebar-toggle:focus {
+  outline: none;
+}
+
+.content-container {
+  padding: 1rem;
+  flex-grow: 1;
+  overflow: hidden;
+  margin-top: 5rem;
+  margin-left: 270px;
+  transition: margin-left 0.3s ease;
+  width:100%;
+  left: 0;
+
+}
+
+.content-container.with-sidebar {
+  margin-left: 280px; /* Adjust to match the width of your sidebar */
+}
+.content{
+  padding: 1rem;
+  /* flex-grow: 1; */
+  /* overflow: hidden; */
+  margin-left: 270px;
+  transition: margin-left 0.3s ease;
+  width:100%;
+  /* left: 0; */
+  box-shadow:  0 4px 8px rgba(0, 0, 0, 0.1) ;
+  height: 6rem;
+ }
+@media (max-width: 768px) {
+  .content-container {
+    margin-left: 0;
+    /* margin-top: 5rem; */
+
+
+  }
+  .content{
+    margin-left: 0;
+  }
+}
+
+/* Navbar CSS */
+/* .navbar {
+  width: 100%;
+} */
+
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .nav-link {
+  padding: 0.5rem 1rem;
+}
+
+.navbar .btn {
+  margin-left: auto;
+}
+
+/* Table */
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.25);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-primary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.table-primary th {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+.table-bordered {
+  border: 2px solid #dee2e6;
+}
+
+.pagination .page-link {
+  color: #6c757d;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.container {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-select {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-select:hover {
+  transform: translateY(-2px);
+}
+
+.table a {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.table a:hover {
+  color: #0056b3; /* Darker color on hover */
+}
