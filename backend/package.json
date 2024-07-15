@@ -4,7 +4,7 @@
   "description": "backend for blackcoffer",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node init && nodemon server.js"
   },
   "author": "mitesh dixit",
   "license": "ISC",
